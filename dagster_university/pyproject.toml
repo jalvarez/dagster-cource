@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "dagster-course"
+version = "0.1.0"
+description = ""
+authors = ["Juan Miguel Alvarez Tosco <juanmi.alvarez@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+dagster = ">=1.6,<2.0"
+dagster-cloud = "^1.6.9"
+dagster-duckdb = "^0.22.9"
+geopandas = "^0.14.3"
+pandas = "^2.2.1"
+plotly = "^5.19.0"
+shapely = "^2.0.3"
+kaleido = "0.2.1"
+
+[tool.poetry.group.dev.dependencies]
+dagster-webserver = "^1.6.9"
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# [build-system]
+# requires = ["setuptools"]
+# build-backend = "setuptools.build_meta"
+
+[tool.dagster]
+module_name = "dagster_university"
+
+[tool.ruff]
+extend = "../../pyproject.toml"
+
+[tool.ruff.lint]
+extend-ignore = [
+
+  # (Unused import): We stub some files with just imports to help people get started
+  "F401",    
+  # (Import block is un-sorted or un-formatted): It's more important that we introduce the imports in the order they're used rather than alphabetically.
+  "I001",
+]

@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "dagster-course"
+version = "0.1.0"
+description = ""
+authors = ["Juan Miguel Alvarez Tosco <juanmi.alvarez@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+dagster = ">=1.6,<2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
