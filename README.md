@@ -1,1 +1,1 @@
-$:~/workspace/dagster-course/dagster_university$ poetry run dagster
+$:~/workspace/dagster-course/dagster_university$ poetry run dagster dev 
